@@ -1,8 +1,8 @@
 {
-  "name": "simplefolio",
+  "name": "portfolio",
   "version": "1.0.1",
   "private": "true",
-  "description": "A clean, beautiful and responsive portfolio template for Developers!",
+  "description": "My personal software engineering portfolio!",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/av1155/simplefolio"
+    "url": "git+https://github.com/av1155/Portfolio"
   },
   "keywords": [],
-  "author": "Jacobo Martinez",
+  "author": "Andrea A. Venti Fuentes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/av1155/simplefolio/issues"
+    "url": "https://github.com/av1155/Portfolio/issues"
   },
   "homepage": "https://github.com/av1155/simplefolio#readme",
   "devDependencies": {
