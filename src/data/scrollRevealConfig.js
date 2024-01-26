@@ -39,7 +39,7 @@ export const targetElements = [
   {
     element: ".about-wrapper__info",
     animation: {
-      delay: 1000,
+      delay: 800,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
@@ -53,14 +53,14 @@ export const targetElements = [
   {
     element: ".project-wrapper__image",
     animation: {
-      delay: 1000,
+      delay: 600,
       origin: window.innerWidth > 768 ? "right" : "bottom",
     },
   },
   {
     element: ".contact-wrapper",
     animation: {
-      delay: 800,
+      delay: 700,
       origin: "bottom",
     },
   },
