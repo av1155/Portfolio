@@ -16,3 +16,129 @@
 @import "./sass/sections/contact";
 @import "./sass/sections/hero";
 @import "./sass/sections/projects";
+
+.carousel-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+}
+
+.other-project-title {
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.learn-more-button {
+    font-size: 1.5vw;
+    position: relative;
+    z-index: 2;
+    /* Ensures the button is above other elements */
+    background-color: #03bdad;
+    border-color: #03bdad;
+    color: #fff;
+}
+
+.learn-more-button:hover,
+.learn-more-button:focus {
+    background-color: #029d8a;
+    border-color: #029d8a;
+    color: #fff;
+}
+
+@media (min-width: 1201px) {
+    .learn-more-button {
+        margin-bottom: 2rem;
+    }
+
+    #projectsCarousel {
+        margin-top: 1vw;
+    }
+
+    #projectsCarousel .carousel-caption h5 {
+        font-size: 4rem;
+    }
+
+    #projectsCarousel .carousel-caption p {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    #projectsCarousel .learn-more-button {
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 5px 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    #projectsCarousel {
+        margin-top: -2.5vw;
+    }
+
+    #projectsCarousel .carousel-caption h5 {
+        font-size: 3.5vw;
+    }
+
+    #projectsCarousel .carousel-caption p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #projectsCarousel .learn-more-button {
+        font-size: 2.5vw;
+        padding: 5px 10px;
+        font-weight: 600;
+    }
+
+    #projectsCarousel .carousel-caption {
+        padding-bottom: 5.5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .learn-more-button {
+        font-size: 4vw;
+        margin-bottom: 6vw;
+    }
+
+    #projectsCarousel {
+        margin-top: -3vw;
+    }
+
+    #projectsCarousel .carousel-caption h5 {
+        font-size: 4vw;
+    }
+
+    #projectsCarousel .carousel-caption p {
+        font-size: 3vw;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+    #projectsCarousel .learn-more-button {
+        font-size: 3vw;
+        font-weight: 600;
+        padding: 3px 7px;
+    }
+
+    #projectsCarousel .carousel-caption {
+        padding-bottom: 20px;
+        padding-left: 12vw;
+        padding-right: 11vw;
+    }
+}
