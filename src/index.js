@@ -7,14 +7,21 @@ initScrollReveal(targetElements, defaultProps);
 initTiltEffect();
 
 // Function to scroll to an element with temporary padding
-function scrollToElementWithPadding(elementId) {
+function scrollToElementWithPadding(elementId, padding = "50px") {
     const element = document.getElementById(elementId);
     if (element) {
-        // Scroll to the element
         element.scrollIntoView({ behavior: "smooth" });
+        element.style.paddingTop = padding;
+    }
+}
 
-        // Apply temporary padding to center the content
-        element.style.paddingTop = "50px";
+// Function to scroll to an element with an offset
+function scrollToElementWithOffset(elementId, offset = 100) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
 }
 
@@ -31,27 +38,42 @@ function applyPaddingOnLoad() {
         "weather-alert-program-project",
     ];
 
-    // Get the current URL
     const currentURL = window.location.href;
-
-    // Check if there is a specific URL parameter
     const hasSpecificParameter = anchorLinks.some((link) =>
         currentURL.includes(`#${link}`),
     );
 
-    // Scroll to the appropriate element or the top of the page based on the parameter
     if (hasSpecificParameter) {
         anchorLinks.forEach((link) => {
             scrollToElementWithPadding(link);
         });
     } else {
-        window.scrollTo(0, 0); // Scroll to the top of the page
+        window.scrollTo(0, 0);
     }
 }
 
-// Listen for the "DOMContentLoaded" event to ensure the page is ready
+// Function to control carousel navigation based on URL parameter
+function navigateCarouselOnLoad() {
+    function getURLParameter(name) {
+        return new URLSearchParams(window.location.search).get(name);
+    }
+
+    const projectIndex = getURLParameter("projectIndex");
+    if (projectIndex !== null && !isNaN(projectIndex)) {
+        // Scroll to the carousel first with offset
+        scrollToElementWithOffset("projectsCarousel", 100); // Custom offset for carousel
+
+        // Then navigate to the specific slide after a short delay
+        setTimeout(() => {
+            $("#projectsCarousel").carousel(parseInt(projectIndex));
+        }, 500); // Adjust delay as needed
+    }
+}
+
+// Listen for the "DOMContentLoaded" event
 document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal(targetElements, defaultProps);
     initTiltEffect();
-    applyPaddingOnLoad(); // Call the function when the page is loaded
+    applyPaddingOnLoad();
+    navigateCarouselOnLoad(); // Navigate to carousel item on load
 });

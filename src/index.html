@@ -45,6 +45,11 @@
     integrity="sha384-+ijdq6iJAkohSQT/pKKYqjlEK1zFXER2QwIkHFe7WQmJrW3z/JVIZzGbkft2kY1M"
     crossorigin="anonymous"></script>
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+    crossorigin="anonymous"></script>
+
   <!-- Remove this script once the portfolio is complete -->
   <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 
@@ -60,6 +65,7 @@
   <div id="top"></div>
 
   <!-- Anchor links -->
+  <!-- Main Projects -->
   <a href="#flaskkeyring-project"></a>
   <a href="#dotfiles-project"></a>
   <a href="#gpa-calculator-project"></a>
@@ -68,6 +74,24 @@
   <a href="#stockfoliohub-project"></a>
   <a href="#planetpath-project"></a>
   <a href="#weather-alert-program-project"></a>
+
+  <!-- Other Projects -->
+  <!-- External Links to Control Carousel -->
+  <a href="#" class="carousel-link" data-target="0" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="1" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="2" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="3" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="4" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="5" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="6" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="7" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="8" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="9" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="10" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="11" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="12" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="13" aria-hidden="true"></a>
+  <a href="#" class="carousel-link" data-target="14" aria-hidden="true"></a>
 
   <!-- **** Hero Section **** -->
   <section id="hero" class="jumbotron">
@@ -658,11 +682,13 @@
               aria-label="Linear Equation Calculator"></button>
             <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="13"
               aria-label="GPA Calculator"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="14"
+              aria-label="Mastermind with Progressive Difficulty"></button>
           </div>
 
           <div class="carousel-inner">
             <!-- Carousel item for FlaskKeyring iOS App -->
-            <div class="carousel-item active">
+            <div class="carousel-item active" id="flaskkeyring-ios-app-project">
               <img src="assets/other_projects/FlaskKeyringIOS.png" class="d-block w-100" alt="FlaskKeyring iOS App" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">FlaskKeyring iOS App</h5>
@@ -673,7 +699,7 @@
             </div>
 
             <!-- Carousel item for Mastermind with Dynamic Guess Generation -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="mastermind-dynamic-guess-project">
               <img src="assets/other_projects/MastermindDynamicGuess.png" class="d-block w-100"
                 alt="Mastermind with Dynamic Guess Generation" />
               <div class="carousel-caption">
@@ -690,7 +716,7 @@
             </div>
 
             <!-- Carousel item for Python Learning Resources -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="python-learning-resources-project">
               <img src="assets/other_projects/PythonLearningResources.png" class="d-block w-100"
                 alt="Python Learning Resources" />
               <div class="carousel-caption">
@@ -702,7 +728,7 @@
             </div>
 
             <!-- Carousel item for Projectile Motion Calculator -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="projectile-motion-calculator-project">
               <img src="assets/other_projects/ProjectileMotionCalculator.png" class="d-block w-100"
                 alt="Projectile Motion Calculator" />
               <div class="carousel-caption">
@@ -719,7 +745,7 @@
             </div>
 
             <!-- Carousel item for Bakery Shop Simulator -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="bakery-shop-simulator-project">
               <img src="assets/other_projects/BakeryShopSimulator.png" class="d-block w-100"
                 alt="Bakery Shop Simulator" />
               <div class="carousel-caption">
@@ -731,7 +757,7 @@
             </div>
 
             <!-- Carousel item for My Bash Scripts Repository -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="bash-scripts-repository-project">
               <img src="assets/other_projects/BashScripts.png" class="d-block w-100" alt="My Bash Scripts Repository" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">
@@ -744,7 +770,7 @@
             </div>
 
             <!-- Carousel item for AstroNvim User Configuration -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="astronvim-user-configuration-project">
               <img src="assets/other_projects/NeovimConfiguration.png" class="d-block w-100"
                 alt="AstroNvim User Configuration" />
               <div class="carousel-caption">
@@ -761,7 +787,7 @@
             </div>
 
             <!-- Carousel item for CodeHub -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="codehub-project">
               <img src="assets/other_projects/CodeHub.png" class="d-block w-100" alt="CodeHub" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">CodeHub</h5>
@@ -772,7 +798,7 @@
             </div>
 
             <!-- Carousel item for PyFun -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="pyfun-project">
               <img src="assets/other_projects/PyFun.png" class="d-block w-100" alt="PyFun" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">PyFun</h5>
@@ -786,7 +812,7 @@
             </div>
 
             <!-- Carousel item for String Edit -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="string-edit-project">
               <img src="assets/other_projects/StringEdit.png" class="d-block w-100" alt="String Edit" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">String Edit</h5>
@@ -797,7 +823,7 @@
             </div>
 
             <!-- Carousel item for Volume Comparison -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="volume-comparison-project">
               <img src="assets/other_projects/VolumeComparison.png" class="d-block w-100" alt="Volume Comparison" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">Volume Comparison</h5>
@@ -808,7 +834,7 @@
             </div>
 
             <!-- Carousel item for Gravity Calculator -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="gravity-calculator-project">
               <img src="assets/other_projects/GravityCalculator.png" class="d-block w-100" alt="Gravity Calculator" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">Gravity Calculator</h5>
@@ -822,7 +848,7 @@
             </div>
 
             <!-- Carousel item for Linear Equation Calculator -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="linear-equation-calculator-project">
               <img src="assets/other_projects/LinearEquationCalculator.png" class="d-block w-100"
                 alt="Linear Equation Calculator" />
               <div class="carousel-caption">
@@ -836,12 +862,25 @@
             </div>
 
             <!-- Carousel item for GPA Calculator -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="gpa-calculator-cli-project">
               <img src="assets/other_projects/GPACalculatorCLI.png" class="d-block w-100" alt="GPA Calculator" />
               <div class="carousel-caption">
                 <h5 class="other-project-title">GPA Calculator</h5>
                 <p>Command-Line Tool for Calculating GPA.</p>
                 <a href="https://github.com/av1155/GPA-Calculator" target="_blank"
+                  class="btn btn-primary learn-more-button">Learn More</a>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="mastermind-progressive-difficulty-project">
+              <img src="assets/other_projects/MastermindProgressiveDifficulty.png" class="d-block w-100"
+                alt="Mastermind with Progressive Difficulty" />
+              <div class="carousel-caption">
+                <h5 class="other-project-title">
+                  Mastermind with Progressive Difficulty
+                </h5>
+                <p>Java-based Mastermind game with progressive difficulty.</p>
+                <a href="https://github.com/av1155/Mastermind-Game" target="_blank"
                   class="btn btn-primary learn-more-button">Learn More</a>
               </div>
             </div>
