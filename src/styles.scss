@@ -17,6 +17,10 @@
 @import "./sass/sections/hero";
 @import "./sass/sections/projects";
 
+html {
+    scroll-padding-top: 3rem;
+}
+
 .carousel-item:before {
     content: "";
     position: absolute;
