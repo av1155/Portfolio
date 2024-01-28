@@ -18,6 +18,7 @@ export function applyPaddingOnLoad() {
     "stockfoliohub-project",
     "planetpath-project",
     "weather-alert-program-project",
+    "carouselAnchor",
   ];
 
   const currentURL = window.location.href;
@@ -41,19 +42,18 @@ export function navigateCarouselOnLoad() {
 
   const projectIndex = getURLParameter("projectIndex");
   if (projectIndex !== null && !isNaN(projectIndex)) {
+    // Scroll to the carousel section first
     scrollToElementWithPadding("carouselAnchor", "100px");
 
-    // Wait for the scroll to complete before updating the carousel
-    const checkScrollComplete = () => {
+    // Use an interval to check if the scroll has reached the carousel section
+    const scrollInterval = setInterval(() => {
       const carouselElement = document.getElementById("carouselAnchor");
       if (window.scrollY >= carouselElement.offsetTop - 100) {
-        // 100 is the padding offset
+        // 100px is the padding offset
+        clearInterval(scrollInterval);
+        // Update the carousel to the specified project index
         $("#projectsCarousel").carousel(parseInt(projectIndex));
-      } else {
-        setTimeout(checkScrollComplete, 100); // Check again after 100ms
       }
-    };
-
-    setTimeout(checkScrollComplete, 500); // Initial delay before starting to check
+    }, 100); // Check every 100ms
   }
 }
