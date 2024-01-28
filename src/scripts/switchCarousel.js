@@ -1,22 +1,22 @@
 export function navigateCarouselOnLoad() {
-  function getURLParameter(name) {
-    return new URLSearchParams(window.location.search).get(name);
-  }
-
-  const projectIndex = getURLParameter("projectIndex");
-  if (projectIndex !== null && !isNaN(projectIndex)) {
-    // Scroll to the "Other Projects" section
-    const otherProjectsSection = document.querySelector("#other-projects");
-    if (otherProjectsSection) {
-      otherProjectsSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  document.addEventListener("DOMContentLoaded", function () {
+    function getURLParameter(name) {
+      return new URLSearchParams(window.location.search).get(name);
     }
 
-    // Then navigate to the specific slide after a short delay to allow for scrolling
-    setTimeout(() => {
+    const projectIndex = getURLParameter("projectIndex");
+    if (projectIndex !== null && !isNaN(projectIndex)) {
+      // Scroll to the "Other Projects" section
+      const otherProjectsSection = document.querySelector("#other-projects");
+      if (otherProjectsSection) {
+        otherProjectsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      // Then navigate to the specific slide
       $("#projectsCarousel").carousel(parseInt(projectIndex));
-    }, 1000); // Adjust delay as needed
-  }
+    }
+  });
 }
