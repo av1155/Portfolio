@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   function getURLParameter(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Scroll to the "Other Projects" section
     window.location.hash = "other-projects";
 
-    window.onload = function() {
+    window.onload = function () {
       // Adding a slight delay to ensure carousel is initialized
-      setTimeout(function() {
+      setTimeout(function () {
         // Navigate to the specific slide
         $("#projectsCarousel").carousel(parseInt(projectIndex));
-      }, 1000); // Delay
+      }, 350); // Delay
     };
   }
 });
