@@ -34,7 +34,6 @@ export function applyPaddingOnLoad() {
   }
 }
 
-// Function to control carousel navigation based on URL parameter
 export function navigateCarouselOnLoad() {
   function getURLParameter(name) {
     return new URLSearchParams(window.location.search).get(name);
@@ -44,8 +43,17 @@ export function navigateCarouselOnLoad() {
   if (projectIndex !== null && !isNaN(projectIndex)) {
     scrollToElementWithPadding("carouselAnchor", "100px");
 
-    setTimeout(() => {
-      $("#projectsCarousel").carousel(parseInt(projectIndex));
-    }, 500);
+    // Wait for the scroll to complete before updating the carousel
+    const checkScrollComplete = () => {
+      const carouselElement = document.getElementById("carouselAnchor");
+      if (window.scrollY >= carouselElement.offsetTop - 100) {
+        // 100 is the padding offset
+        $("#projectsCarousel").carousel(parseInt(projectIndex));
+      } else {
+        setTimeout(checkScrollComplete, 100); // Check again after 100ms
+      }
+    };
+
+    setTimeout(checkScrollComplete, 500); // Initial delay before starting to check
   }
 }
