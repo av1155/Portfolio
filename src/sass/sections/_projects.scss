@@ -76,9 +76,9 @@
           0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 
         @include respond(phone) {
-          border: 1px solid $light-grey;
+          border: none;
           box-shadow: none;
-          margin-bottom: 3.2rem;
+          // margin-bottom: 3.2rem;
         }
       }
     }
