@@ -52,13 +52,6 @@
 
   <!-- Remove this script once the portfolio is complete -->
   <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
-
-  <style>
-    /* Add space above the "Know More" button */
-    .hero-cta {
-      margin-top: 160px;
-    }
-  </style>
 </head>
 
 <body>
@@ -912,6 +905,24 @@
   <!-- /END Projects Section -->
 
   <!-- **** Contact Section **** -->
+  <!-- <section id="contact"> -->
+  <!--   <div class="container"> -->
+  <!--     <h2 class="section-title">Contact</h2> -->
+  <!--     <div class="contact-wrapper load-hidden"> -->
+  <!--       <p class="contact-wrapper__text"> -->
+  <!--         Looking for a skilled programmer to boost your projects? I'm your -->
+  <!--         guy! Passionate and adaptable, I'm ready to collaborate and innovate -->
+  <!--         on your next big thing. Let's chat about how I can help you succeed. -->
+  <!--         Reach out now! -->
+  <!--       </p> -->
+  <!--       <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" -->
+  <!--         href="mailto:andrea.venti12@gmail.com">Contact Me</a> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </section> -->
+  <!-- /END Contact Section -->
+
+  <!-- **** Contact Section **** -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
@@ -922,8 +933,29 @@
           on your next big thing. Let's chat about how I can help you succeed.
           Reach out now!
         </p>
-        <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
-          href="mailto:andrea.venti12@gmail.com">Contact Me</a>
+        <!-- Contact Form -->
+        <form method="POST" netlify class="row justify-content-center align-items-center g-3">
+          <input type="hidden" name="_subject" value="Contact request from personal website" />
+
+          <!-- Email Field -->
+          <div id="email-div" class="col-md-6">
+            <input type="email" name="_replyto" id="email-field" class="form-control" placeholder="Your email"
+              required />
+          </div>
+
+          <!-- Message Field -->
+          <div class="col-12">
+            <textarea name="message" id="message-field" class="form-control" placeholder="Your message" required
+              rows="4"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary send-message-button">
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>

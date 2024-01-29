@@ -21,6 +21,35 @@ html {
     scroll-padding-top: 3rem;
 }
 
+#email-div {
+    padding-top: 1rem;
+}
+
+#message-field,
+#email-field {
+    font-size: 1.5rem;
+    background-color: #fefdf6;
+}
+
+.send-message-button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #00796b;
+    border-color: #00695c;
+    color: #fefdf6;
+}
+
+.send-message-button:hover {
+    background-color: #009688;
+    border-color: #00897b;
+}
+
+/* Add space above the "Know More" button */
+.hero-cta {
+    margin-top: 160px;
+}
+
 .carousel-item:before {
     content: "";
     position: absolute;
