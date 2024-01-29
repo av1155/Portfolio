@@ -1,3 +1,5 @@
+import { showPopup } from "./scripts/mastermindPopup";
+
 import "bootstrap";
 import initScrollReveal from "./scripts/scrollReveal";
 import initTiltEffect from "./scripts/tiltAnimation";
@@ -8,3 +10,5 @@ import "./scripts/switchCarousel";
 initScrollReveal(targetElements, defaultProps);
 initTiltEffect();
 adjustScrollForAbout();
+
+window.showPopup = showPopup;
