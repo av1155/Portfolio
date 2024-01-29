@@ -21,11 +21,6 @@ html {
     scroll-padding-top: 3rem;
 }
 
-/* Add space above the "Know More" button */
-.hero-cta {
-    margin-top: 160px;
-}
-
 .carousel-item:before {
     content: "";
     position: absolute;
@@ -102,6 +97,10 @@ html {
 }
 
 @media (min-width: 1201px) {
+    #knowMoreBtn {
+        margin-top: 22vh;
+    }
+
     .learn-more-button {
         margin-bottom: 2rem;
     }
@@ -133,6 +132,10 @@ html {
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
+    #knowMoreBtn {
+        margin-top: 35vh;
+    }
+
     #email-and-message-div {
         max-width: 70%;
     }
@@ -164,6 +167,10 @@ html {
 }
 
 @media (max-width: 600px) {
+    #knowMoreBtn {
+        margin-top: 35vh;
+    }
+
     #email-and-message-div {
         max-width: 90%;
     }
