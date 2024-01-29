@@ -1,5 +1,5 @@
 export const defaultProps = {
-  easing: "cubic-bezier(0.5, 0, 0, 1)",
+  easing: "cubic-bezier(0.1, 0, 0.58, 1)",
   distance: "30px",
   duration: 1000,
   desktop: true,
@@ -39,14 +39,14 @@ export const targetElements = [
   {
     element: ".about-wrapper__info",
     animation: {
-      delay: 800,
+      delay: 600,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".project-wrapper__text",
     animation: {
-      delay: 500,
+      delay: 600,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
@@ -60,7 +60,7 @@ export const targetElements = [
   {
     element: ".contact-wrapper",
     animation: {
-      delay: 700,
+      delay: 600,
       origin: "bottom",
     },
   },

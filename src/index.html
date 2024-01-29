@@ -937,16 +937,19 @@
         <form method="POST" netlify class="row justify-content-center align-items-center g-3">
           <input type="hidden" name="_subject" value="Contact request from personal website" />
 
-          <!-- Email Field -->
-          <div id="email-div" class="col-md-6">
-            <input type="email" name="_replyto" id="email-field" class="form-control" placeholder="Your email"
-              required />
-          </div>
+          <!-- Container for the fields -->
+          <div id="email-and-message-div" class="field-container">
+            <!-- Email Field -->
+            <div id="email-div" class="col-md-12">
+              <input type="email" name="_replyto" id="email-field" class="form-control" placeholder="Your email"
+                required />
+            </div>
 
-          <!-- Message Field -->
-          <div class="col-12">
-            <textarea name="message" id="message-field" class="form-control" placeholder="Your message" required
-              rows="4"></textarea>
+            <!-- Message Field -->
+            <div class="col-md-12">
+              <textarea name="message" id="message-field" class="form-control" placeholder="Your message" required
+                rows="5"></textarea>
+            </div>
           </div>
 
           <!-- Submit Button -->
@@ -968,9 +971,9 @@
         <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
       </a>
       <div class="social-links">
-        <a rel="noreferrer" href="https://twitter.com/Andru_VF" target="_blank">
-          <i class="fa fa-twitter fa-inverse"></i>
-        </a>
+        <!-- <a rel="noreferrer" href="https://twitter.com/Andru_VF" target="_blank"> -->
+        <!--   <i class="fa fa-twitter fa-inverse"></i> -->
+        <!-- </a> -->
         <a rel="noreferrer" href="https://www.linkedin.com/in/andrea-venti/" target="_blank">
           <i class="fa fa-linkedin fa-inverse"></i>
         </a>
