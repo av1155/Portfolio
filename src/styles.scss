@@ -78,6 +78,11 @@ html {
     border-color: #00897b;
 }
 
+#projectsCarousel {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
 #email-and-message-div {
     max-width: 50%;
     margin: auto;
@@ -106,7 +111,7 @@ html {
     }
 
     #projectsCarousel {
-        margin-top: 1vw;
+        margin-top: 0vw;
     }
 
     #projectsCarousel .carousel-caption h5 {
