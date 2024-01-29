@@ -35,6 +35,11 @@
     content="Discover Andrea Venti's journey as a software engineering innovator - from academic achievements to software development skills." />
   <meta property="twitter:image" content="assets/favicon.jpg" />
 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+    crossorigin="anonymous"></script>
+
   <!-- Bootstrap and Custom CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
@@ -45,10 +50,11 @@
     integrity="sha384-+ijdq6iJAkohSQT/pKKYqjlEK1zFXER2QwIkHFe7WQmJrW3z/JVIZzGbkft2kY1M"
     crossorigin="anonymous"></script>
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
-    crossorigin="anonymous"></script>
+  <script>
+    function showPopup() {
+      $("#imageModal").modal("show");
+    }
+  </script>
 
   <!-- Remove this script once the portfolio is complete -->
   <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
@@ -70,7 +76,7 @@
   <a class="anchor-link" href="#dotfiles-project"></a>
   <a class="anchor-link" href="#gpa-calculator-project"></a>
   <a class="anchor-link" href="#pypassmanager-project"></a>
-  <a class="anchor-link" href="#mastermindai-project"></a>
+  <a class="anchor-link" href="#mastermind-project"></a>
   <a class="anchor-link" href="#stockfoliohub-project"></a>
   <a class="anchor-link" href="#planetpath-project"></a>
   <a class="anchor-link" href="#weather-alert-program-project"></a>
@@ -193,7 +199,9 @@
                   robust stack including Python, Flask, PostgreSQL,
                   JavaScript, HTML, CSS, Bootstrap, jQuery, and AJAX,
                   highlighting my ability to integrate multiple technologies
-                  for a cohesive solution.
+                  for a cohesive solution. In FlaskKeyring's development, I
+                  utilized SQLite for local dummy testing, ensuring robust
+                  quality before updates to the remote PostgreSQL database.
                 </p>
                 <p class="mb-4">
                   At the core of FlaskKeyring is a focus on user security and
@@ -426,39 +434,43 @@
         <!-- /END Project -->
 
         <!-- Notice: each .row is a project -->
-        <div class="row" id="mastermindai-project">
+        <div class="row" id="mastermind-project">
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__text load-hidden">
               <h3 class="project-wrapper__text-title">
-                MastermindAI: Enhancing Game Strategy with Adaptive Artificial
-                Intelligence
+                Mastermind Trilogy: Java Mastery in AI, Adaptability, and
+                Strategy
               </h3>
               <div>
                 <p class="mb-4">
-                  MastermindGameWithAI is a Java-based project I developed,
-                  demonstrating my expertise in AI and game development. This
-                  project elevates the classic Mastermind game with a twist of
-                  technical innovation, integrating adaptive artificial
-                  intelligence for an enhanced gaming experience. The AI,
-                  known as MastermindAI, is a unique creation of mine, powered
-                  by strategic guessing algorithms that adapt to the game's
-                  changing dynamics.
+                  The Mastermind Trilogy is an ensemble of three Java
+                  projects, reinventing the classic game of Mastermind. The
+                  first, MastermindAI, features an advanced AI opponent,
+                  showcasing my expertise in artificial intelligence and
+                  adaptive game logic. This project demonstrates my ability to
+                  merge complex algorithms with engaging gameplay. The second,
+                  Mastermind with Progressive Difficulty, elevates the user
+                  experience by dynamically scaling the game's difficulty,
+                  reflecting my skill in creating responsive and evolving
+                  applications.
                 </p>
                 <p class="mb-4">
-                  Key features of MastermindGameWithAI include a dynamic level
-                  system, tailoring challenges to the player's skill level,
-                  and a 'generateGuess' function that represents the AI's
-                  tactical prowess. The game's mechanics, such as player input
-                  validation, code evaluation, and player-AI interactions, are
-                  meticulously crafted for an engaging and harmonious
-                  experience. MastermindGameWithAI stands as a testament to my
-                  skills in AI-driven game design and Java programming.
+                  Concluding the trilogy, Mastermind with Dynamic Guess
+                  Generation brings unpredictability with a strategy-based
+                  gameplay. It illustrates my proficiency in data manipulation
+                  and algorithmic thinking, challenging players with
+                  ever-changing scenarios. Together, these projects exemplify
+                  my comprehensive understanding of Java programming,
+                  highlighting my capability to develop sophisticated,
+                  intelligent, and user-centered software solutions. The
+                  Mastermind Trilogy not only demonstrates technical expertise
+                  but also my commitment to blending traditional gaming with
+                  modern programming flair.
                 </p>
               </div>
 
               <center>
-                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main"
-                  href="https://github.com/av1155/MastermindAI">
+                <a rel="noreferrer" class="cta-btn text-color-main" href="javascript:void(0);" onclick="showPopup()">
                   Source Code
                 </a>
               </center>
@@ -466,10 +478,11 @@
           </div>
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__image load-hidden">
-              <a rel="noreferrer" href="https://github.com/av1155/MastermindAI" target="_blank">
+              <a rel="noreferrer" href="javascript:void(0);" onclick="showPopup()">
                 <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
                   class="thumbnail rounded js-tilt">
-                  <img alt="Project Image" class="img-fluid" src="assets/main_projects/MastermindAI.jpg" />
+                  <img alt="Project Image" class="img-fluid clickable-image"
+                    src="assets/main_projects/MastermindAI.jpg" />
                 </div>
               </a>
             </div>
@@ -949,6 +962,35 @@
     </div>
   </footer>
   <!-- /END Footer Section -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Links</h5>
+        </div>
+        <div class="modal-body">
+          <center>
+            <!-- Links -->
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main"
+              href="https://github.com/av1155/MastermindAI">
+              MastermindAI Source Code
+            </a>
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main"
+              href="https://github.com/av1155/Mastermind-Game">
+              Progressive Difficulty Source Code
+            </a>
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main"
+              href="https://gitfront.io/r/av1155/yJs52aDKC9rG/College-Code/blob/CSC_120/CSC_120_Lecture/src/FinalProject/MastermindPart2VersionD.java">
+              Dynamic Guess Generation Source Code
+            </a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script defer type="module" src="index.js"></script>
 </body>
