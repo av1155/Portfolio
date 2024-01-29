@@ -50,12 +50,6 @@
     integrity="sha384-+ijdq6iJAkohSQT/pKKYqjlEK1zFXER2QwIkHFe7WQmJrW3z/JVIZzGbkft2kY1M"
     crossorigin="anonymous"></script>
 
-  <script>
-    function showPopup() {
-      $("#imageModal").modal("show");
-    }
-  </script>
-
   <!-- Remove this script once the portfolio is complete -->
   <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 
@@ -963,8 +957,6 @@
   </footer>
   <!-- /END Footer Section -->
 
-  <script defer type="module" src="index.js"></script>
-
   <!-- Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
     aria-hidden="true">
@@ -994,5 +986,13 @@
     </div>
   </div>
 </body>
+
+<script>
+  function showPopup() {
+    $("#imageModal").modal("show");
+  }
+</script>
+
+<script defer type="module" src="index.js"></script>
 
 </html>
