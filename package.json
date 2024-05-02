@@ -5,8 +5,8 @@
   "description": "My personal software engineering portfolio!",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "rm -rf .parcel-cache && parcel",
+    "build": "rm -rf .parcel-cache && parcel build"
   },
   "repository": {
     "type": "git",
